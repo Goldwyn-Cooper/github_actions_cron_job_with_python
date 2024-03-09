@@ -13,7 +13,6 @@ class TelegramBot:
         params = dict(chat_id=self.chat_id, text=text)
         response = requests.post(self.url + 'sendMessage', params)
         response.raise_for_status()
-        return response
     
     def get_chat_id(self):
         response = requests.get(self.url + 'getUpdates')

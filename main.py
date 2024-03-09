@@ -3,4 +3,4 @@ if __name__ == "__main__":
     load_dotenv()
     from src.telegram import TelegramBot
     bot = TelegramBot()
-    bot.send_message(bot.chat_id, 'Hello World!')
+    bot.send_message('Hello World!')

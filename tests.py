@@ -17,8 +17,7 @@ class Tests(TestCase):
     def test_send_message(self):
         from src.telegram import TelegramBot
         bot = TelegramBot()
-        response = bot.send_message(bot.chat_id, 'Hello World!')
-        self.assertEqual(response.status_code, 200)
+        bot.send_message('Hello World!')
 
 if __name__ == '__main__':
     main()
