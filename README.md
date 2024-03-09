@@ -7,16 +7,17 @@
 
 ## 🏁 Start
 ### Install & Test
-```
+```shell
 $ python3 -m venv venv
 $ source venv/bin/activate
 # pip install requests python-dotenv -q
 # pip freeze > requirements.txt
 $ pip install -r requirements.txt
+# touch .env  # dotenv 혹은 환경변수 설정 필요
 $ python test.py # 단위 테스트
 ```
-### Secrets
-- `Settings` > `Security` > `Secrets and variables` > `Actions` > `Secrets` > `New repository secret`
+### GitHub Secrets for GitHub Actions
+> `Settings` > `Security` > `Secrets and variables` > `Actions` > `Secrets` > `New repository secret`
 
 ## 📚 Reference
 ### Unittest

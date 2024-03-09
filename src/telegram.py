@@ -6,7 +6,11 @@ import requests
 class TelegramBot:
     def __init__(self):
         self.token = os.getenv('TELEGRAM_BOT_TOKEN')
+        if not self.token:
+            raise ValueError('TELEGRAM_BOT_TOKEN is not set')
         self.chat_id = os.getenv('TELEGRAM_CHAT_ID')
+        if not self.chat_id:
+            raise ValueError('TELEGRAM_CHAT_ID is not set')
         self.url = f'https://api.telegram.org/bot{self.token}/'
 
     def send_message(self, text):
